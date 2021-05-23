@@ -14,9 +14,9 @@ namespace R5T.D0069
         {
             var entryPointAssembly = Assembly.GetEntryAssembly();
 
-            var entryPointAssemblyName = entryPointAssembly.GetName().Name;
+            var entryPointAssemblyName = entryPointAssembly.GetName();
 
-            return Task.FromResult(entryPointAssemblyName);
+            return Task.FromResult(entryPointAssemblyName.Name);
         }
     }
 }
